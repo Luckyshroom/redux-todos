@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import {editTodo} from "../actions";
+import {editTodo} from '../actions/index'
 
 class Todo extends Component {
     constructor(props) {

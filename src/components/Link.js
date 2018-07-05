@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
+import {setVisibilityFilter} from '../actions/index'
 
 const Link = ({active, children, onClick}) => (
     <button className="btn btn-primary"
@@ -19,4 +21,11 @@ Link.propTypes = {
     onClick: PropTypes.func.isRequired
 };
 
-export default Link
+export default connect(
+    (state, ownProps) => ({
+        active: ownProps.filter === state.visibilityFilter
+    }),
+    (dispatch, ownProps) => ({
+        onClick: () => dispatch(setVisibilityFilter(ownProps.filter))
+    })
+)(Link)

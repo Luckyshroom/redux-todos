@@ -1,9 +1,9 @@
 import React from 'react'
-import {render} from 'react-dom'
+import App from './containers/App'
 import {Provider} from 'react-redux'
 import {PersistGate} from 'redux-persist/integration/react'
+import {render} from 'react-dom'
 import {store, persistor} from './store/configureStore'
-import App from './components/App'
 
 render(
     <Provider store={store}>

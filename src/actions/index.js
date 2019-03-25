@@ -15,7 +15,7 @@ export const editTodo = (id, content, importance, deadline) => ({
     deadline
 });
 
-export const deleteTodo = (id) => ({
+export const deleteTodo = id => ({
     type: 'DELETE_TODO',
     id
 });

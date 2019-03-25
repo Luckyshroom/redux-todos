@@ -108,7 +108,8 @@ class Todo extends Component {
                         </div>
                         <div className="custom-radio custom-control">
                             <input type="radio" id="_increased" name="customRadio" className="custom-control-input"
-                                   value="Increased" defaultChecked={importance === 'Increased'} onChange={this.handleRadio}/>
+                                   value="Increased" defaultChecked={importance === 'Increased'}
+                                   onChange={this.handleRadio}/>
                             <label className="custom-control-label" htmlFor="_increased">Increased</label>
                         </div>
                         <div className="custom-radio custom-control">

@@ -1,23 +1,30 @@
 {
   "name": "redux-todos",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "^1.1.4"
+    "react-scripts": "^2.1.8"
   },
   "dependencies": {
-    "bootstrap": "^4.1.1",
-    "prop-types": "^15.6.1",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "react-redux": "^5.0.7",
-    "redux": "^3.5.2",
-    "redux-persist": "^5.9.1"
+    "bootstrap": "^4.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "npm run build && aws s3 cp --recursive ./build s3://todo.depa.io --cache-control max-age=3600",
     "eject": "react-scripts eject",
     "test": "react-scripts test"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
